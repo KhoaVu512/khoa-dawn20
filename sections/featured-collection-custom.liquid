@@ -106,7 +106,7 @@
           >
             {% render 'card-product',
               card_product: product,
-              media_aspect_ratio: section.settings.image_ratio,
+              media_aspect_ratio: square,
               image_shape: section.settings.image_shape,
               show_secondary_image: section.settings.show_secondary_image,
               show_vendor: section.settings.show_vendor,
@@ -180,7 +180,7 @@
       <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <a
           href="{{ section.settings.collection.url }}"
-          class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
+          class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %} btn-featured-collection"
           aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title | escape }}"
         >
           {{ 'sections.featured_collection.view_all' | t }}
@@ -195,7 +195,7 @@
 
 {% schema %}
 {
-  "name": "t:sections.featured-collection.name",
+  "name": "khoa-featured",
   "tag": "section",
   "class": "section",
   "disabled_on": {
@@ -299,7 +299,7 @@
     {
       "type": "checkbox",
       "id": "show_view_all",
-      "default": true,
+      "default": false,
       "label": "t:sections.featured-collection.settings.show_view_all.label"
     },
     {

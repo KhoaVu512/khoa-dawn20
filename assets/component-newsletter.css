@@ -1,6 +1,5 @@
 .newsletter-form {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -9,9 +8,9 @@
 
 @media screen and (min-width: 750px) {
   .newsletter-form {
-    align-items: flex-start;
+    align-items: center;
     margin: 0 auto;
-    max-width: 36rem;
+    max-width: 80rem;
   }
 }
 

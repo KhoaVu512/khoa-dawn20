@@ -1,0 +1,15 @@
+.slide-container-override {
+  display: flex;
+}
+
+.slide-item-override {
+  flex: 1 !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+@media screen and (max-width: 1429px) {
+ 
+  .slidershow-container {
+
+  }
+}

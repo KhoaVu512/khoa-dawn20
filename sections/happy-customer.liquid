@@ -1,0 +1,274 @@
+<div class="happy-cart">
+  <div class="happy-customers">
+    <div class="row">
+      <div class="intro">
+        <h2 class="happy-title">Happy Customers</h2>
+        <p class="happy-description">
+          Unwrap Happiness with Every Gift. Join the Macorner Family of Delighted Shoppers!
+        </p>
+        <a href="/collections/all" class="btn btn-primary happy-btn">Show More</a>
+      </div>
+      <div class="photo-group">
+        <div class="photo small">
+          <img
+            src="https://macorner.co/cdn/shop/files/1721335612__img_6562__original.jpg?v=1721614810&width=750"
+            alt="Happy Customer 1"
+          >
+        </div>
+        <div class="photo small">
+          <img
+            src="https://macorner.co/cdn/shop/files/1719456664__0__VOVRIpzW__1718754_77782db4-8e0c-413b-b9e1-9178d396f48f.jpg?v=1721614809&width=750"
+            alt="Happy Customer 2"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="photo small">
+        <img
+          src="https://macorner.co/cdn/shop/files/1719456550__0__DS7IArPk__1699042_2.jpg?v=1721615559&width=750"
+          alt="Happy Customer 3"
+        >
+      </div>
+      <div class="photo small">
+        <img
+          src="https://macorner.co/cdn/shop/files/happy8.jpg?v=1719393748&width=750"
+          alt="Happy Customer 4"
+        >
+      </div>
+      <div class="photo small">
+        <img
+          src="https://macorner.co/cdn/shop/files/1721439339__img_6533__huge.jpg?v=1721614810&width=750"
+          alt="Happy Customer 5"
+        >
+      </div>
+      <div class="photo small">
+        <img
+          src="https://macorner.co/cdn/shop/files/happy4.jpg?v=1719393747&width=750"
+          alt="Happy Customer 6"
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .happy-cart {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    font-family: sans-serif;
+  }
+  .happy-customers {
+    padding: 20px;
+    max-width: 1600px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .intro,
+  .photo-group {
+    flex: 1;
+    box-sizing: border-box;
+  }
+
+  .intro {
+    text-align: start;
+  }
+
+  .photo-group {
+    display: flex;
+    gap: 10px;
+  }
+
+  .photo-group .photo {
+    flex: 1 25%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .row:nth-child(2) {
+    justify-content: space-between;
+  }
+
+  .row:nth-child(2) .photo {
+    flex: 1 1 calc(25% - 10px); /* Chia đều các ảnh trong hàng thứ hai */
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .happy-title {
+    font-size: 6rem;
+    color: #f7921f;
+    font-weight: 600;
+    margin: 0 0;
+  }
+  .happy-description {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #0b2a4a;
+    font-weight: 500;
+  }
+  .happy-btn {
+    background: #7373731a ;
+    color: var(--color-blue_base) ;
+    border: 1px solid rgba(115, 115, 115, 0.1) ;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+  .happy-btn:hover {
+    border: 1px solid #000;
+    color: #000;
+    background-color: #fff;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "happy-customer",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "t:sections.newsletter.settings.full_width.label"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.newsletter.settings.paragraph.content"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.newsletter.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "t:sections.newsletter.blocks.heading.settings.heading.default",
+          "label": "t:sections.newsletter.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            },
+            {
+              "value": "hxl",
+              "label": "t:sections.all.heading_size.options__4.label"
+            },
+            {
+              "value": "hxxl",
+              "label": "t:sections.all.heading_size.options__5.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "name": "t:sections.newsletter.blocks.paragraph.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "t:sections.newsletter.blocks.paragraph.settings.paragraph.default",
+          "label": "t:sections.newsletter.blocks.paragraph.settings.paragraph.label"
+        }
+      ]
+    },
+    {
+      "type": "email_form",
+      "name": "t:sections.newsletter.blocks.email_form.name",
+      "limit": 1
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.newsletter.presets.name",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "email_form"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

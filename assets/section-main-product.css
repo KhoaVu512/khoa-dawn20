@@ -995,6 +995,22 @@ a.product__text {
     display: flex;
   }
 }
+@media screen and (max-width: 1429px) {
+  .slider-mobile-gutter {
+    width: 100%;
+    position: relative;
+    padding-top: 30%;
+    background-color: blue !important;
+  }
+  .slidershow-container {
+      position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  }
+}
+
 
 @media screen and (min-width: 900px) {
   .product--small .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {

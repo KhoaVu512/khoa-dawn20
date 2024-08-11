@@ -1,5 +1,6 @@
 .image-with-text .grid {
   margin-bottom: 0;
+  height: 387px;
 }
 
 .image-with-text .grid__item {
@@ -310,12 +311,14 @@
 
 .image-with-text:not(.collapse-corners, .image-with-text--overlap) .image-with-text__media-item {
   z-index: 2;
+  height: 400px;
 }
 
 /* Needed for gradient continuity with or without animation so that transparent PNG images come up as we would expect */
 .image-with-text.image-with-text--overlap .backround-transparent,
 .image-with-text:not(.image-with-text--overlap) .background-transparent {
-  background: transparent;
+  background: #fff9f4;
+  height: 400px;
 }
 
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
@@ -338,6 +341,7 @@
 
 .image-with-text__content > * + * {
   margin-top: 2rem;
+  font-size: 24px;
 }
 
 .image-with-text__content > .image-with-text__text:empty ~ a {
@@ -348,6 +352,9 @@
 .image-with-text__text--caption + .image-with-text__heading,
 .image-with-text__text--caption:first-child {
   margin-top: 0;
+  font-size: 50px;
+  font-weight: 700;
+  color: #26909d;
 }
 
 .image-with-text__content :last-child:is(.image-with-text__heading),
@@ -358,10 +365,30 @@
 .image-with-text__content .button + .image-with-text__text {
   margin-top: 2rem;
 }
-
+.color-scheme-9b4e7d6c-649b-4e24-83cd-ab0cc9dbf844 {
+  --gradient-background: none;
+  color: rgba(var(--color-foreground), 0.75);
+}
 .image-with-text__content .image-with-text__text + .button {
   margin-top: 3rem;
+  border-radius: 50px;
+  font-size: 25px;
+  font-weight: 600;
+  opacity: 20;
+  border: none;
+  background-color: #F7921F;
+   font-family: sans-serif;
 }
+.image-with-text__content .image-with-text__text + .button:hover {
+ background-color: #fff;
+  border: none;
+  color: #f7921f;
+  transition: ease-out 0.7s !important;
+  transition-timing-function: ease-in !important;
+  border: solid;
+  font-family: sans-serif;
+}
+
 
 .image-with-text__heading {
   margin-bottom: 0;

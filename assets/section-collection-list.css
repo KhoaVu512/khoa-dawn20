@@ -59,3 +59,10 @@
 .collection-list-view-all {
   margin-top: 2rem;
 }
+
+.custom-collection-title {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: sans-serif;
+  color: #f7921f;
+}
